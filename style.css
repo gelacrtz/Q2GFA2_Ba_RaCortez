@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'Courier New', Courier, monospace;
+    src: url(monospace);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    scroll-behavior: auto;
+    scroll-padding: 5.5dvh;
+    overflow-x: auto;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+a:visited{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: midnightblue;
+    opacity: 60%;
+    color: whitesmoke;
+    position: fixed;
+    width: 100dvw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+header{
+    position: fixed;
+    z-index: 98;
+}
+
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+section#banner{
+    position: relative;
+    z-index: 80;
+    padding: 0;
+    background: radial-gradient(black, #191970, darkgrey);
+    h1{
+        position: relative;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 45px ;
+        z-index: 99;
+        text-align: center;
+        top: 25vh;
+        color: palegoldenrod;
+    }
+}
+
+.bodies{
+    display: inline-block;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#pic1{
+    background-image: url(Galaxy.gif);
+    width: 600px;
+    height: 550px;
+    animation: Galaxy 50s linear infinite;
+}
+
+@keyframes Galaxy{
+    0% {transform: translate(-400px, -400px);}
+    100% {transform: translate(3000px, 700px);}
+}
+
+#pic2{
+    background-image: url(GasGiant.gif);
+    width: 300px;
+    height: 300px;
+    position: sticky;
+    animation: GasGiant 50s infinite;
+}
+
+@keyframes GasGiant{
+    0% {transform: translate(1000px, 200px);}
+    100% {transform: translate(-400px, 30px);}
+}
+
+#pic3{
+    background-image: url(IceWorld.gif);
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    animation: IceWorld 50s linear infinite;
+}
+
+@keyframes IceWorld{
+    0%{transform: scale(.05) translate(0px, 0px);}
+    90%{transform: translate(2000px, 10px)}
+    100%{transform: scale(3);}
+}
+
+#pic4{
+    background-image: url(Island.gif);
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    margin-left: 40.5vw;
+    margin-right: 0vh;
+    margin-top: 30vh;
+    width: 400px;
+    height: 400px;
+    animation: Island 30s infinite;
+}
+
+@keyframes Island{
+    0%{transform: scale(0.5);}
+    90%{transform: rotate(45deg) scale(1);}
+    100%{transform: scale(0.5);}
+}
+
+#Universe{
+    display: inline-block;
+    width: 10000px;
+    height: 100%;
+    background: transparent url(media/tinining.gif) repeat;
+    opacity: 35%;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 82;
+    animation: spark 20s linear infinite;
+}
+
+@keyframes spark{
+    0% {transform: translate3d(0px, 0px, 0px);}
+    100% {transform: translate3d(1000px, 0px, 0px);}
+}
